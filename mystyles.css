@@ -1,0 +1,167 @@
+/* a simple ONE-COLUMN layout so that it is responsive */
+* {
+	/* view layout on screen while styling | remove after styling	*/
+	/* outline: 0.0625rem dotted #bf40bf; */
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body {
+	font-family: "Work Sans", sans-serif;
+}
+
+/* navigation */
+.navbar {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	justify-content: space-between;
+	height: 3.125em;
+	line-height: 3.125em;
+	background-color: #000;
+	z-index: 2;
+}
+.navbar .project {
+	font-size: 1.875em;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-left: 1.75em;
+}
+.navbar .project a {
+	text-decoration: none;
+	color: #fff;
+}
+.navbar .project a:hover {
+	color: #65318e;
+}
+.navbar ol {
+	display: flex;
+	list-style: none;
+}
+.navbar ol li {
+	display: block;
+	font-size: 1.25rem;
+}
+.navbar ol li a {
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 0.1rem;
+	display: block;
+	padding: 0 1.875em;
+	transition: 0.2s ease;
+}
+ol li:hover a {
+	color: #555;
+}
+
+h1,
+h2,
+.mont {
+	font-family: "Montserrat", sans-serif;
+}
+span {
+	color: #65318e;
+}
+.page {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.page .text {
+	position: relative;
+	z-index: 1;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #cfd8dc;
+}
+.page .text::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 0.15em;
+	background: #65318e;
+	border-radius: 3.125em;
+	bottom: -0.625em;
+}
+.page .image {
+	position: absolute;
+	background: url(https://wallpapercave.com/wp/PWZT4V3.jpg);
+	transform: scaleX(-1);
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	filter: brightness(25%);
+}
+.part {
+	position: relative;
+	min-height: 100vh;
+	padding: 5em 0;
+	width: 100%;
+}
+.part h2 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	margin: 1em 1em;
+	position: relative;
+}
+.part h2::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 0.15em;
+	background: #65318e;
+	border-radius: 3.125em;
+	bottom: -0.625em;
+}
+.part p {
+	font-size: 2rem;
+	margin: 1em 5em;
+	text-align: justify;
+}
+.part:nth-child(even) {
+	background: #000;
+	color: #cfd8dc;
+}
+
+#image {
+	max-width: 100%; /* makes images flexible */
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+#img-caption {
+	text-align: center;
+}
+#tribute-link {
+	font-family: "Work Sans", sans-serif;
+}
+#tribute-link {
+	color: #cfd8dc;
+	text-decoration: none;
+}
+#tribute-link:hover {
+	color: #fff;
+	background-color: #65318e;
+}
+#tribute-link:active {
+	color: #65318e;
+	background-color: #fff;
+}
+footer {
+	text-align: center;
+}
