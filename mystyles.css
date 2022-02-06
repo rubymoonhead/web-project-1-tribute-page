@@ -1,7 +1,7 @@
 /* a simple ONE-COLUMN layout so that it is responsive */
 * {
 	/* view layout on screen while styling | remove after styling	*/
-	/* outline: 0.0625rem dotted #bf40bf; */
+	outline: 0.0625rem dashed #bf40bf;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
@@ -15,8 +15,28 @@ html {
 *:after {
 	box-sizing: inherit;
 }
+
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+
+/* color variables */
+:root {
+	--black: #000;
+	--white: #fff;
+	--purple: #65318e;
+	--dark-gray: #555;
+	--pale-blue: #cfd8dc;
+}
+
 body {
 	font-family: "Work Sans", sans-serif;
+	max-width: 100em;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* navigation */
@@ -24,10 +44,11 @@ body {
 	display: flex;
 	position: fixed;
 	width: 100%;
+	max-width: 100em;
 	justify-content: space-between;
 	height: 3.125em;
 	line-height: 3.125em;
-	background-color: #000;
+	background-color: var(--black);
 	z-index: 2;
 }
 .navbar .project {
@@ -35,43 +56,45 @@ body {
 	font-weight: bold;
 	text-transform: uppercase;
 	cursor: pointer;
-	margin-left: 1.75em;
+	margin-left: 1em;
 }
 .navbar .project a {
-	text-decoration: none;
-	color: #fff;
+	color: var(--white);
+	transition: 0.4s ease;
 }
 .navbar .project a:hover {
-	color: #65318e;
+	color: var(--purple);
 }
 .navbar ol {
 	display: flex;
-	list-style: none;
+	/* list-style: none; */
 }
 .navbar ol li {
 	display: block;
 	font-size: 1.25rem;
 }
 .navbar ol li a {
-	color: #fff;
-	text-decoration: none;
+	color: var(--white);
 	letter-spacing: 0.1rem;
 	display: block;
 	padding: 0 1.875em;
-	transition: 0.2s ease;
+	transition: 0.4s ease;
 }
-ol li:hover a {
-	color: #555;
+.navbar ol li:hover a {
+	color: var(--dark-gray);
 }
 
+/* main */
 h1,
 h2,
 .mont {
 	font-family: "Montserrat", sans-serif;
 }
 span {
-	color: #65318e;
+	color: var(--purple);
 }
+
+/* page */
 .page {
 	position: relative;
 	min-height: 100vh;
@@ -86,17 +109,22 @@ span {
 	font-size: 2rem;
 	text-transform: uppercase;
 	font-weight: 800;
-	color: #cfd8dc;
+	color: var(--pale-blue);
 }
+.page .text #title, #tribute-info {
+	padding: 1rem 0;
+}
+/* horizontal line */
 .page .text::after {
 	position: absolute;
 	content: "";
 	width: 100%;
 	height: 0.15em;
-	background: #65318e;
+	background: var(--purple);
 	border-radius: 3.125em;
 	bottom: -0.625em;
 }
+/* background image */
 .page .image {
 	position: absolute;
 	background: url(https://wallpapercave.com/wp/PWZT4V3.jpg);
@@ -107,6 +135,8 @@ span {
 	background-size: cover;
 	filter: brightness(25%);
 }
+
+
 .part {
 	position: relative;
 	min-height: 100vh;
@@ -124,7 +154,7 @@ span {
 	content: "";
 	width: 100%;
 	height: 0.15em;
-	background: #65318e;
+	background: var(--purple);
 	border-radius: 3.125em;
 	bottom: -0.625em;
 }
@@ -134,8 +164,8 @@ span {
 	text-align: justify;
 }
 .part:nth-child(even) {
-	background: #000;
-	color: #cfd8dc;
+	background: var(--black);
+	color: var(--pale-blue);
 }
 
 #image {
@@ -151,16 +181,16 @@ span {
 	font-family: "Work Sans", sans-serif;
 }
 #tribute-link {
-	color: #cfd8dc;
-	text-decoration: none;
+	color: var(--pale-blue);
+	/* text-decoration: none; */
 }
 #tribute-link:hover {
-	color: #fff;
-	background-color: #65318e;
+	color: var(--white);
+	background-color: var(--purple);
 }
 #tribute-link:active {
-	color: #65318e;
-	background-color: #fff;
+	color: var(--purple);
+	background-color: var(--white);
 }
 footer {
 	text-align: center;
